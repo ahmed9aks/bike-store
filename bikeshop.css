@@ -1,0 +1,416 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 900;
+    color: whitesmoke;
+}
+p{
+    line-height: 1.5;
+}
+
+.navbar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+#navbar-logo {
+    background-color: #131313;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    color: whitesmoke;
+}
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar-item {
+    height: 80px;
+}
+.navbar-links {
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.navbar-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem;
+    width: 100%;
+}
+
+.navbar-links:hover {
+    color: burlywood;
+    transition: all 0.3s ease;
+}
+@media screen and (max-width: 960px) {
+    .navbar-container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+    .navbar-menu {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: -1;
+    }
+    
+    .navbar-menu.active {
+        background: #131313;
+        left:0;
+        opacity: 1;
+        transition: all 0.5 ease;
+        z-index: -1;
+        height:100vh;
+        font-size: 1.6rem;
+        position: center;
+        padding: 45px;
+    }
+    
+    #navbar-logo{
+        padding-left: 25px;
+    }
+
+    .navbar-toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar-item {
+        width: 100%;
+    }
+
+    .navbar-links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    .navbar-btn {
+        padding-bottom: 2rem;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+    .navbar-toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0; 
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+.hero {
+    background-image: url("./images/hero.jpg");
+    padding: 200px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero-heading{
+    font-size: 100px;
+    margin-bottom: 24px;
+    color: whitesmoke;
+}
+
+
+.hero-description {
+    font-size: 2rem;
+    color: whitesmoke;
+    background-size: 100%;
+}
+.main-btn {
+    font-size:  1.8rem;
+    background: transparent;
+    padding: 20px 60px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+    
+}
+
+.main-btn a {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.main-btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.main-btn:hover {
+    transform: scale(1.5);
+    transition: all 0.3s ease;
+    background-color: #131313;
+}
+.main-btn a:hover  {
+    font-style: italic;
+}
+.main {
+    background-color: burlywood;
+    padding: 10rem 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 2fr) );
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 90%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    color:#131313;
+}
+.main img{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.main-content, .main-content h1, .main-content p{
+    color: #131313;
+    padding: 25px;
+}
+.main-content .main-btn {
+    font-size:  1.8rem;
+    background: black;
+    padding: 25px;
+    border: none;
+    border-radius: 25px;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+    
+}
+
+.main-content .main-btn a {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-content .main-btn:hover {
+    transform: scale(1.5);
+    transition: all 0.3s ease;
+}
+footer, footer .container{
+    background: #131313;
+    text-align: center;
+    padding: 5rem 0;
+}
+footer .container .btn-logo a {
+    display: flex;
+    justify-content: center;
+}
+.footer-menu{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.footer-menu  a{
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-decoration: none;
+    padding: 1.25rem;
+}
+.footer-menu a:hover{
+    transform: scale(1.5);
+    transition: all 0.3s ease;
+}
+.social-links a, .website_rights{
+    padding: 12px;
+    color: white;
+}
+
+@media screen and (max-width: 860px){
+    .main-container {
+        grid-template-columns: 1fr; 
+    }    
+    .main-img-1{
+        order: -1;
+    }
+    .main-content h1,.hero-heading {
+        font-size: 60px;
+    }
+    .hero {
+        background-image: url("./images/hero.jpg");
+        padding: 200px 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    .hero-description {
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 515px){
+    .main-content h1, .hero-heading {
+        font-size: 45px;
+    }
+
+    .hero-description {
+        font-size: 30px;
+    }
+    #navbar-logo{
+        font-size: 1.5rem;
+    }
+    
+}
+@media screen and (max-width: 425px){
+    .main-content h1, .hero-heading {
+        font-size: 30px;
+    }
+
+    .hero-description {
+        font-size: 20px;
+    }
+    #navbar-logo{
+        font-size: 1.5rem;
+    }
+}
+
+/* Sign-up and login forms */
+
+.container{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-image: url(./images/dark-min.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+}
+form{
+    margin: 10px;
+    color: #fff;
+    padding: 15px;
+}
+.container form .btn{
+    font-size:  1rem;
+    background: rgb(143, 134, 134);
+    padding: 5px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 1rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+    color: white;
+    width: 100%;
+}
+.input-group input{
+    padding: 10px;
+    width: 100%;
+    border-radius: 20px;
+}
