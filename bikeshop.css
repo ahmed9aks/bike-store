@@ -330,8 +330,12 @@ footer .container .btn-logo a {
     transform: scale(1.5);
     transition: all 0.3s ease;
 }
-.social-links a, .website_rights{
+.social-links a {
     padding: 12px;
+   text-decoration: none;
+}
+.website_rights{
+    font-size: 13px;
     color: white;
 }
 .social-links{
@@ -351,19 +355,27 @@ footer .container .btn-logo a {
     width: 50px;
     border-radius: 50%;
 }
+.social-icon i{
+    color: #000;
+    width: 100%;
+}
 @media screen and (max-width: 860px){
     .main-container {
         grid-template-columns: 1fr; 
     }    
+    .hero-heading{
+        color: rgb(228, 146, 80);
+    }
     .main-img-1{
         order: -1;
     }
     .main-content h1,.hero-heading {
         font-size: 60px;
     }
+
     .hero {
         background-image: url("./images/hero.jpg");
-        padding: 200px 0;
+        padding: 0;
         background-repeat: no-repeat;
         background-size: cover;
         
@@ -413,6 +425,7 @@ footer .container .btn-logo a {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    background-position: center;
 
 }
 form{
