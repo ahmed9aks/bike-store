@@ -1,7 +1,7 @@
 
 
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +22,7 @@
             </div>
             <ul class="navbar-menu">
                 <li class="navbar-item">
-                    <a href="index.html" class="navbar-links page" id="home-page">Home</a>
+                    <a href="index.php" class="navbar-links page" id="home-page">Home</a>
                 </li>
                 <li class="navbar-item">
                     <a href="#menu" class="navbar-links page" id="menu-page">Menu</a>
@@ -31,7 +31,7 @@
                     <a href="#contact" class="navbar-links page" id="contact-page">Contact Us</a>
                 </li>
                 <li class="navbar-item">
-                    <a href="index.html" class="navbar-links page">Logout</a>
+                    <a href="index.php" class="navbar-links page">Logout</a>
                 </li>
                
             </ul>
@@ -96,30 +96,11 @@
     </div>
    
     <!----Footer----->
-    <footer>
-        <div class="container">
-            <div class="btn-logo">
-                <a  href="#home" id="navbar-logo">Bike Shop</a>
-            </div>
-            
-          <div class="footer-menu">
-            
-             <p><a href="#home">Home</a></p>
-             <p><a href="#menu">Menu</a></p>
-             <p><a href="#menu">Place Your Order</a></p>
-            
-          </div>
-          <p class="website_rights">&#169; Bike Shop 2022. All rights reserved</p>
-          <nav class="social-links" id="contact">
-            <a class="social-icon" href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a class="social-icon" href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a class="social-icon" href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a class="social-icon" href="#" ><i class="fa-brands fa-pinterest"></i></a>
-          </nav>
-        </div>
-      </footer>
+    <?php
+            include_once'footer.php';
+    ?>
       
       <script src="bikeshop.js"></script>
       
 </body>
-</html>
+</php>

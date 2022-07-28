@@ -1,43 +1,9 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bike Shop</title>
-    <link rel="stylesheet" href="bikeshop.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-</head>
+<?php
+   include_once'header.php';
+?>
 <body>
     <!-------Navbar Section------->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="#home" id="navbar-logo">Bike Shop</a>
-            <div class="navbar-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar-menu">
-                <li class="navbar-item">
-                    <a href="#home" class="navbar-links page" id="home-page">Home</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="#menu" class="navbar-links page" id="menu-page">Menu</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="#contact" class="navbar-links page" id="contact-page">Contact Us</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="login.html" class="navbar-links page">Login</a>
-                </li>
-                <li class="navbar-item">
-                    <a href="register.html" class="navbar-links page">Sign Up</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+  
    
     <!------Hero Section------>
     <div class="hero" id="home">
@@ -96,31 +62,11 @@
         </div>
     </div>
    
-    <!----Footer----->
-    <footer>
-        <div class="container">
-            <div class="btn-logo">
-                <a  href="#home" id="navbar-logo">Bike Shop</a>
-            </div>
-            
-          <div class="footer-menu">
-            
-             <p><a href="#home">Home</a></p>
-             <p><a href="#menu">Menu</a></p>
-             <p><a href="#menu">Place Your Order</a></p>
-            
-          </div>
-          <p class="website_rights">&#169; Bike Shop 2022. All rights reserved</p>
-          <nav class="social-links" id="contact">
-            <a class="social-icon" href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a class="social-icon" href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a class="social-icon" href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a class="social-icon" href="#" ><i class="fa-brands fa-pinterest"></i></a>
-          </nav>
-        </div>
-      </footer>
+    <?php
+            include_once'footer.php';
+    ?>
       
       <script src="bikeshop.js"></script>
       
 </body>
-</html>
+</php>
