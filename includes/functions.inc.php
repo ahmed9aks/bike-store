@@ -10,7 +10,7 @@ function emptyInputSignup($username, $email, $password, $passwordRepeat){
     return $result;
 }
 
-function invalidUid($username){
+function invalidUsername($username){
     $result;
     if (!preg_match("/^[a-zA-Z0-9]*$/", $username)){
         $result = true;
@@ -56,7 +56,7 @@ function usernameExists($conn, $username, $email){
     mysqli_stmt_close($stmt);
 }
 function createUser($conn, $email, $username, $password){
-    $sql= "INSERT*INTO users (email, username, password) VALUES(?, ?, ?, ?);";
+    $sql= "INSERT INTO users (email, username, password) VALUES(?, ?, ?, ?);";
     $ $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)){
         header("location:../signup.php?error=stmtfailed");
@@ -80,12 +80,12 @@ function emptyInpuLogin($username, $password){
     return $result;
 }
 function loginUser($conn, $username,$password){
-    $uidExists = usernameExists($conn, $username, $password);
+    $usernameExists = usernameExists($conn, $username, $password);
     if(usernameExists === false){
         header("location:../login.php?error=wronglogin");
         exit();
     }
-    $hashedPassword = $uidExists["password"];
+    $hashedPassword = $usernameExists["password"];
     $checkPassword = password_verify($password,$hashedPassword);
     if($checkPassword === false){
         header("location:../login.php?error=wronglogin");
@@ -93,8 +93,8 @@ function loginUser($conn, $username,$password){
     }
     elseif ($checkedPassword === true) {
         session_start();
-        $_SESSION["id"]= $uidExists["id"];
-        $_SESSION["uid"]= $uidExists["username"];
+        $_SESSION["id"]= $usernameExists["id"];
+        $_SESSION["username"]= $usernameExists["username"];
         header("location:../index.php");
         exit();
     }
