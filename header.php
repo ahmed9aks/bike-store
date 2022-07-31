@@ -22,7 +22,7 @@
                  <a href="index.php" class="navbar-links page" id="home-page">Home</a>
              </li>
              <li class="navbar-item">
-                 <a href="#menu" class="navbar-links page" id="menu-page">Menu</a>
+                 <a href="index.php#menu" class="navbar-links page" id="menu-page">Menu</a>
              </li>
              <li class="navbar-item">
                  <a href="#contact" class="navbar-links page" id="contact-page">Contact Us</a>

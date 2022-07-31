@@ -37,8 +37,8 @@ function passwordMacth($password, $passwordRepeat){
     } 
     return $result;
 }
-function uidExists($conn, $username, $email){
-    $sql = "SELECT*FROM users WHERE usersUid =? OR usersEmail =?;";
+function usernameExists($conn, $username, $email){
+    $sql = "SELECT*FROM users WHERE username =? OR email =?;";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)){
         header("location:../signup.php?error=stmtfailed");
@@ -55,8 +55,8 @@ function uidExists($conn, $username, $email){
     }
     mysqli_stmt_close($stmt);
 }
-function createUser($conn, $name, $email, $username, $password){
-    $sql= "INSERT INTO users (usersName, usersEmail, usersUid, usersPassword) VALUES(?, ?, ?, ?);";
+function createUser($conn, $email, $username, $password){
+    $sql= "INSERT*INTO users (email, username, password) VALUES(?, ?, ?, ?);";
     $ $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)){
         header("location:../signup.php?error=stmtfailed");
@@ -80,12 +80,12 @@ function emptyInpuLogin($username, $password){
     return $result;
 }
 function loginUser($conn, $username,$password){
-    $uidExists = uidExists($conn, $username, $password);
-    if(uidExists === false){
+    $uidExists = usernameExists($conn, $username, $password);
+    if(usernameExists === false){
         header("location:../login.php?error=wronglogin");
         exit();
     }
-    $hashedPassword = $uidExists["usersPassword"];
+    $hashedPassword = $uidExists["password"];
     $checkPassword = password_verify($password,$hashedPassword);
     if($checkPassword === false){
         header("location:../login.php?error=wronglogin");
@@ -93,8 +93,8 @@ function loginUser($conn, $username,$password){
     }
     elseif ($checkedPassword === true) {
         session_start();
-        $_SESSION["userid"]= $uidExists["userId"];
-        $_SESSION["useruid"]= $uidExists["userUid"];
+        $_SESSION["id"]= $uidExists["id"];
+        $_SESSION["uid"]= $uidExists["username"];
         header("location:../index.php");
         exit();
     }

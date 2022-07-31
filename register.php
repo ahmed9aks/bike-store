@@ -7,7 +7,7 @@
             <p class="login-text" style="font-size: 2rem; font-weight: 800;">Register</p>
 			<div class="input-group">
                 <p>Username</p>
-				<input type="text" placeholder="Username" name="uid" required>
+				<input type="text" placeholder="Username" name="username" required>
 			</div>
 			<div class="input-group">
                 <p>Email</p>
@@ -32,7 +32,7 @@
 		if($_GET["error"] == "emptyinput"){
 			echo"<p>Fill in all fields, please and thank you</p>";
 		} 
-		elseif ($_GET["error"]== "invaliduid") {
+		elseif ($_GET["error"]== "invalidusername") {
 			echo"<p>Choose a proper username</p>";
 		}
 		elseif ($_GET["erorr"]=="invalidemail") {

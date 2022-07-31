@@ -1,6 +1,6 @@
 <?php
   if(isset($_POST["submit"])){
-    $username= $_POST["uid"];
+    $username= $_POST["username"];
     $email= $_POST["email"];
     $password= $_POST["password"];
     $passwordRepeat= $_POST["cpassword"];
@@ -12,8 +12,8 @@
         header("location:../signup.php?error=emptyinput");
         exit();
     }
-    if(invalidUid($username)!== false){
-        header("location:../signup.php?error=invaliduid");
+    if(invalidUsername($username)!== false){
+        header("location:../signup.php?error=invalidusername");
         exit(); 
     }
     if(invalidEmail($email)!== false){
@@ -24,7 +24,7 @@
         header("location:../signup.php?error=passwordsdontmatch");
         exit(); 
     }
-    if(uidExists($conn, $username, $email)!==false){
+    if(usernameExists($conn, $username, $email)!==false){
         header("location:../signup.php?error=usernameoremailtaken");
         exit();
     }
