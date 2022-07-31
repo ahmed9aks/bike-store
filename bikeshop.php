@@ -13,7 +13,6 @@ header("Location: bikeshop.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bike Shop</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="bikeshop.css">
 </head>
 <body>
@@ -70,35 +69,35 @@ header("Location: bikeshop.php");
         <div class="main-container" >
             
             <div class="main-content">
-                <h1 data-aos="fade-right">Cruising bicycles</h1>
-                <p data-aos="fade-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam totam debitis doloribus aliquid voluptate explicabo cupiditate sequi magni neque pariatur iusto voluptatum reprehenderit dolorem ex,
+                <h1>Cruising bicycles</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam totam debitis doloribus aliquid voluptate explicabo cupiditate sequi magni neque pariatur iusto voluptatum reprehenderit dolorem ex,
                  assumenda vel ab voluptatibus saepe?</p>
                 <button class="main-btn"><a href="#">Order Now!</a></button>
             </div>
             <div class="main-img-1" >
-                <img src="./images/city-min.jpg" alt="" data-aos="fade-left" >
+                <img src="./images/city-min.jpg" alt="" >
             </div>
         </div>
         <div class="main-container" >
             <div class="main-img">
-                <img src="./images/electric-min.jpg" alt="" data-aos="fade-right">
+                <img src="./images/electric-min.jpg" alt="">
             </div>
             <div class="main-content">
-                <h1 data-aos="fade-left">Electric bikes</h1>
-                <p data-aos="fade-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam totam debitis doloribus aliquid voluptate explicabo cupiditate sequi magni neque pariatur iusto voluptatum reprehenderit dolorem ex,
+                <h1>Electric bikes</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam totam debitis doloribus aliquid voluptate explicabo cupiditate sequi magni neque pariatur iusto voluptatum reprehenderit dolorem ex,
                  assumenda vel ab voluptatibus saepe?</p>
                 <button class="main-btn"><a href="#">Order Now!</a></button>
             </div>
         </div>
         <div class="main-container">
             <div class="main-content">
-                <h1 data-aos="fade-right">Mountain biking for nature lovers</h1>
-                <p data-aos="fade-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam totam debitis doloribus aliquid voluptate explicabo cupiditate sequi magni neque pariatur iusto voluptatum reprehenderit dolorem ex,
+                <h1>Mountain biking for nature lovers</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam totam debitis doloribus aliquid voluptate explicabo cupiditate sequi magni neque pariatur iusto voluptatum reprehenderit dolorem ex,
                  assumenda vel ab voluptatibus saepe?</p>
                 <button class="main-btn"><a href="#">Order Now!</a></button>
             </div>
             <div class="main-img-1">
-                <img src="./images/mountainbike-min.jpg" alt="" data-aos="fade-left">
+                <img src="./images/mountainbike-min.jpg" alt="">
             </div>
         </div>
     </div>

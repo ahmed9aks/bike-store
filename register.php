@@ -7,7 +7,7 @@
             <p class="login-text" style="font-size: 2rem; font-weight: 800;">Register</p>
 			<div class="input-group">
                 <p>Username</p>
-				<input type="text" placeholder="Username" name="username" required>
+				<input type="text" placeholder="Username" name="uid" required>
 			</div>
 			<div class="input-group">
                 <p>Email</p>
